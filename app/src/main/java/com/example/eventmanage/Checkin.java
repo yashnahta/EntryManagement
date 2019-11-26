@@ -24,6 +24,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.sql.Time;
 import java.sql.Timestamp;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Map;
@@ -42,9 +44,16 @@ public class Checkin extends AppCompatActivity {
         myRef = database.getReference();
         EditText name=findViewById(R.id.nm);
         EditText email=findViewById(R.id.em);
+        EditText cin = findViewById(R.id.cin);
         EditText phone=findViewById(R.id.ph);
-        Date currentTime = Calendar.getInstance().getTime();
-        String curr=currentTime.toString();
+
+
+        DateFormat dateFormat = new SimpleDateFormat("hh:mm a");
+        String curr = dateFormat.format(Calendar.getInstance().getTime());
+       // String curr=currentTime.toString();
+
+
+        cin.setText(curr);
         requestSmsPermission();
         myRef=database.getReference().child("host").child("email");
         myRef.addValueEventListener(new ValueEventListener() {
@@ -124,6 +133,8 @@ public class Checkin extends AppCompatActivity {
         }
     }
     public void ch(View view) {
+        Date currentTime = Calendar.getInstance().getTime();
+        String curr = currentTime.toString();
 
 
         database = FirebaseDatabase.getInstance();
@@ -132,9 +143,9 @@ public class Checkin extends AppCompatActivity {
         EditText email = findViewById(R.id.em);
         EditText phone = findViewById(R.id.ph);
         EditText cin = findViewById(R.id.cin);
+       // cin.setText(curr);
        // EditText cout = findViewById(R.id.cout);
-        Date currentTime = Calendar.getInstance().getTime();
-        String curr = currentTime.toString();
+
 
         if (phone.getText().toString().equals("")) {
             Toast.makeText(getApplicationContext(), "Please enter all the details",

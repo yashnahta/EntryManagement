@@ -22,6 +22,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.sql.Time;
 import java.sql.Timestamp;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Map;
@@ -42,8 +44,10 @@ public class Checkout extends AppCompatActivity {
         EditText name = findViewById(R.id.nm);
         EditText email = findViewById(R.id.em);
         EditText phone = findViewById(R.id.ph);
-        Date currentTime = Calendar.getInstance().getTime();
-        String curr = currentTime.toString();
+        DateFormat dateFormat = new SimpleDateFormat("hh:mm a");
+        String curr = dateFormat.format(Calendar.getInstance().getTime());
+        EditText out = findViewById(R.id.out);
+        out.setText(curr);
 //        myRef.child("Visitor").child(phone.getText().toString()).child("name").setValue(name.getText().toString());
 //        myRef.child("Visitor").child(phone.getText().toString()).child("email").setValue(email.getText().toString());
 //        myRef.child("Visitor").child(phone.getText().toString()).child("timestamp").setValue(curr);
@@ -130,6 +134,7 @@ public class Checkout extends AppCompatActivity {
         EditText phone = findViewById(R.id.ph);
         Date currentTime = Calendar.getInstance().getTime();
         String curr = currentTime.toString();
+
         if (phone.getText().toString().equals("") ) {
             Toast.makeText(getApplicationContext(), "Please enter all the details",
                     Toast.LENGTH_LONG).show();
