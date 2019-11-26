@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">eventmanage</string>
+    <string name="title_activity_change_host">ChangeHost</string>
+</resources>
