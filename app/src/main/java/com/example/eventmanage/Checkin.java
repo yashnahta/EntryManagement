@@ -12,23 +12,18 @@ import android.os.Bundle;
 import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ServerValue;
 import com.google.firebase.database.ValueEventListener;
 
-import java.sql.Time;
-import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.Map;
 
 public class Checkin extends AppCompatActivity {
     FirebaseDatabase database;
@@ -143,6 +138,7 @@ public class Checkin extends AppCompatActivity {
         EditText email = findViewById(R.id.em);
         EditText phone = findViewById(R.id.ph);
         EditText cin = findViewById(R.id.cin);
+        EditText add=findViewById(R.id.add1);
        // cin.setText(curr);
        // EditText cout = findViewById(R.id.cout);
 
@@ -158,7 +154,9 @@ public class Checkin extends AppCompatActivity {
             myRef.child("Visitor").child(phone.getText().toString()).child("Checked").setValue(1);
             myRef.child("Visitor").child(phone.getText().toString()).child("Phone").setValue(phone.getText().toString());
             myRef.child("Visitor").child(phone.getText().toString()).child("CheckIn").setValue(cin.getText().toString());
-         //   myRef.child("Visitor").child(phone.getText().toString()).child("CheckOut").setValue(cout.getText().toString());
+            myRef.child("Visitor").child(phone.getText().toString()).child("Address").setValue(add.getText().toString());
+
+            //   myRef.child("Visitor").child(phone.getText().toString()).child("CheckOut").setValue(cout.getText().toString());
             myRef.child("Visitor").child(phone.getText().toString()).child("host").setValue(mna);
 
 

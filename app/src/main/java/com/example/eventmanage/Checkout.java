@@ -32,7 +32,7 @@ public class Checkout extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference myRef;
     int f = 0;
-    String h,ci,co,n;
+    String h,ci,co,n,ad;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -106,6 +106,24 @@ public class Checkout extends AppCompatActivity {
                         //TextView email=findViewById(R.id.email);
                         String value = dataSnapshot.getValue(String.class);
                         n=value;
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError error) {
+                        // Failed to read value
+                        // Log.w(TAG, "Failed to read value.", error.toException());
+                    }
+                });
+
+                myRef=database.getReference().child("Visitor").child(phone.getText().toString()).child("Address");
+                myRef.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        // This method is called once with the initial value and again
+                        // whenever data at this location is updated.
+                        //TextView email=findViewById(R.id.email);
+                        String value = dataSnapshot.getValue(String.class);
+                        ad=value;
                     }
 
                     @Override
@@ -190,7 +208,7 @@ public class Checkout extends AppCompatActivity {
             co=out.getText().toString();
 
             String p=phone.getText().toString();
-            String message="Visitor Details : \n"+"Name - "+n+"\nPhone - "+p+"\nCheckIn Time - "+ci+"\nCheckOut Time - "+co+"\nHost - "+h;
+            String message="Visitor Details : \n"+"Name - "+n+"\nPhone - "+p+"\nCheckIn Time - "+ci+"\nCheckOut Time - "+co+"\nHost - "+h+"\nAddress - "+ad;
 
 
             JavaMailAPI javaMailAPI = new JavaMailAPI(this, email.getText().toString(), "Meeting Details with Host - "+h, message);
