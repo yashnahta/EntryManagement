@@ -91,23 +91,7 @@ public class Checkout extends AppCompatActivity {
                     }
                 });
 
-                myRef=database.getReference().child("Visitor").child(phone.getText().toString()).child("CheckOut");
-                myRef.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        // This method is called once with the initial value and again
-                        // whenever data at this location is updated.
-                        //TextView email=findViewById(R.id.email);
-                        String value = dataSnapshot.getValue(String.class);
-                        co=value;
-                    }
 
-                    @Override
-                    public void onCancelled(DatabaseError error) {
-                        // Failed to read value
-                        // Log.w(TAG, "Failed to read value.", error.toException());
-                    }
-                });
 
                 myRef=database.getReference().child("Visitor").child(phone.getText().toString()).child("name");
                 myRef.addValueEventListener(new ValueEventListener() {
@@ -141,12 +125,12 @@ public class Checkout extends AppCompatActivity {
     public void ch(View view) {
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference();
-        EditText name = findViewById(R.id.nm);
+        EditText out = findViewById(R.id.out);
         EditText email = findViewById(R.id.em);
         EditText phone = findViewById(R.id.ph);
         Date currentTime = Calendar.getInstance().getTime();
         String curr = currentTime.toString();
-        if (phone.getText().toString().equals("")) {
+        if (phone.getText().toString().equals("") ) {
             Toast.makeText(getApplicationContext(), "Please enter all the details",
                     Toast.LENGTH_LONG).show();
         } else {
@@ -155,6 +139,7 @@ public class Checkout extends AppCompatActivity {
            myRef.child("Visitor").child(phone.getText().toString()).child("email").setValue(email.getText().toString());
             myRef.child("Visitor").child(phone.getText().toString()).child("timestampOut").setValue(curr);
             myRef.child("Visitor").child(phone.getText().toString()).child("Checked").setValue(0);
+            myRef.child("Visitor").child(phone.getText().toString()).child("CheckOut").setValue(out.getText().toString());
 //            myRef.child("Visitor").child(phone.getText().toString()).child("Phone").setValue(phone.getText().toString());
 
 
@@ -197,7 +182,7 @@ public class Checkout extends AppCompatActivity {
             //send
 
 
-
+            co=out.getText().toString();
 
             String p=phone.getText().toString();
             String message="Visitor Details : \n"+"Name - "+n+"\nPhone - "+p+"\nCheckIn Time - "+ci+"\nCheckOut Time - "+co+"\nHost - "+h;

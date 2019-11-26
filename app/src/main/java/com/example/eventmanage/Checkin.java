@@ -31,7 +31,7 @@ import java.util.Map;
 public class Checkin extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference myRef;
-    String memail,mphone;
+    String memail,mphone,mna;
     private static final int PERMISSION_SEND_SMS = 123;
     int f;
     @Override
@@ -84,6 +84,26 @@ public class Checkin extends AppCompatActivity {
             }
         });
 
+
+        myRef=database.getReference().child("host").child("name");
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                //TextView email=findViewById(R.id.email);
+                String value = dataSnapshot.getValue(String.class);
+                mna=value;
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                // Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
+
 //        myRef.child("Visitor").child(phone.getText().toString()).child("name").setValue(name.getText().toString());
 //        myRef.child("Visitor").child(phone.getText().toString()).child("email").setValue(email.getText().toString());
 //        myRef.child("Visitor").child(phone.getText().toString()).child("timestamp").setValue(curr);
@@ -112,7 +132,7 @@ public class Checkin extends AppCompatActivity {
         EditText email = findViewById(R.id.em);
         EditText phone = findViewById(R.id.ph);
         EditText cin = findViewById(R.id.cin);
-        EditText cout = findViewById(R.id.cout);
+       // EditText cout = findViewById(R.id.cout);
         Date currentTime = Calendar.getInstance().getTime();
         String curr = currentTime.toString();
 
@@ -127,7 +147,8 @@ public class Checkin extends AppCompatActivity {
             myRef.child("Visitor").child(phone.getText().toString()).child("Checked").setValue(1);
             myRef.child("Visitor").child(phone.getText().toString()).child("Phone").setValue(phone.getText().toString());
             myRef.child("Visitor").child(phone.getText().toString()).child("CheckIn").setValue(cin.getText().toString());
-            myRef.child("Visitor").child(phone.getText().toString()).child("CheckOut").setValue(cout.getText().toString());
+         //   myRef.child("Visitor").child(phone.getText().toString()).child("CheckOut").setValue(cout.getText().toString());
+            myRef.child("Visitor").child(phone.getText().toString()).child("host").setValue(mna);
 
 
 
@@ -167,9 +188,8 @@ public class Checkin extends AppCompatActivity {
             String p=phone.getText().toString();
             String e=email.getText().toString();
             String ci=cin.getText().toString();
-            String co=cout.getText().toString();
-            String message="Visitor Details : \n"+"Name - "+n+"\nEmail - "+e+"\nPhone - "+p+"\nCheckIn Time - "+ci+"\nCheckOut Time - "+co;
-
+         //   String co=cout.getText().toString();
+            String message="Visitor Details : \n"+"Name - "+n+"\nEmail - "+e+"\nPhone - "+p+"\nCheckIn Time - "+ci;
 
             JavaMailAPI javaMailAPI = new JavaMailAPI(this, memail, "Visitor - "+ n +" Details", message);
 

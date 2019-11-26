@@ -32,7 +32,7 @@ public class HostActivity extends AppCompatActivity {
                 // whenever data at this location is updated.
                 TextView name=findViewById(R.id.name1);
                 String value = dataSnapshot.getValue(String.class);
-                name.setText(value);
+                name.setText("Name- " +value);
                // Log.d(TAG, "Value is: " + value);
             }
 
@@ -52,7 +52,7 @@ public class HostActivity extends AppCompatActivity {
                 // whenever data at this location is updated.
                 TextView name=findViewById(R.id.ema);
                 String value = dataSnapshot.getValue(String.class);
-                name.setText(value);
+                name.setText("Email- "+value);
                 // Log.d(TAG, "Value is: " + value);
             }
 
@@ -72,7 +72,7 @@ public class HostActivity extends AppCompatActivity {
                 // whenever data at this location is updated.
                 TextView name=findViewById(R.id.pha);
                 String value = dataSnapshot.getValue(String.class);
-                name.setText(value);
+                name.setText("Phone- "+value);
                 // Log.d(TAG, "Value is: " + value);
             }
 
