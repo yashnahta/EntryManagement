@@ -24,6 +24,20 @@ When the user enters his details and checks out,the details are saved in Firebas
 
 ![Database](f4.png)
 
-Also an E-mail is sent to Host post the meeting-
+Also an E-mail is sent to Host after user Checks out of the meeting-
 
 ![Database](f3.png)
+
+# Host
+Host Details can be changed in 2 ways-
+*Directly without any Validation.
+*Check for the password of the previous Host.
+Depending on the requirements we can use any of the above.
+
+# Tech Stack-
+**Android using Java and Xml**
+
+# Setup-
+To install the app either open source code in **Android Studio** and build to run the app or install it directly with the [Apk File](link)
+
+
