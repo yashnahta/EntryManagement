@@ -20,6 +20,8 @@ Also message is sent to the host using the phones Messaging app Carrier Network-
 E-Mail is sent using JavaMail API in Android -[Port of JavaMail API](https://code.google.com/archive/p/javamail-android/)
 We also need to Define a JSSE(Java Security Socket Extension) Provider.
 Since our email sender is specialized for GMail, mailhost is hard coded. So, constructor takes only username and password to authenticate to SMTP server. In constructor, we define all the Properties used during the Session for which we get a default instance.
+E-mail is sent to the Host-
+
 
 ![Database](f2.png)
 
@@ -28,7 +30,7 @@ When the user enters his details and checks out,the details are saved in Firebas
 
 ![Database](f4.png)
 
-Also an E-mail is sent to Host after user Checks out of the meeting-
+Also an E-mail is sent to Visitor after user Checks out of the meeting-
 
 ![Database](f3.png)
 
