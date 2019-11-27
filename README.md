@@ -44,9 +44,9 @@ Depending on the requirements we can use any of the above.
 To install the app either open source code in **Android Studio** and build to run the app or install it directly with the [Apk File](link)
 
 # App ScreenShots-
-![Homescreen](s3.png)
-![CheckIn](s4.png)
-![CheckOut](s5.png)
-![Host](s2.png)
-![Validate Host](s1.png)
+![Homescreen](s1.png)
+![CheckIn](s2.png)
+![CheckOut](s3.png)
+![Host](s4.png)
+![Validate Host](s5.png)
 ![Change Host](s6.png)
