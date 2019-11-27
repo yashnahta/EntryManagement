@@ -42,7 +42,7 @@ Depending on the requirements we can use any of the above.
 **Android using Java and Xml**
 
 # Setup-
-To install the app either open source code in **Android Studio** and build to run the app or install it directly with the [Apk File](link)
+To install the app either open source code in **Android Studio** and build to run the app or install it directly with the [Apk File](https://drive.google.com/open?id=1PUNinAsr_B9krhzVt66ubLZn8Uf_tHN1)
 
 # App ScreenShots-
 ![Homescreen](s1.png)
