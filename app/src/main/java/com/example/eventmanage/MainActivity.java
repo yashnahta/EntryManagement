@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+       // ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Home");
+        this.getSupportActionBar().setTitle("HomeScreen");
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference();
         requestSmsPermission();

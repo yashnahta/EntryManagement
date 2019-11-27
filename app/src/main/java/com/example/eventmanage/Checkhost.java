@@ -22,6 +22,7 @@ public class Checkhost extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkhost);
+        this.getSupportActionBar().setTitle("Validate Host");
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference();
         myRef=database.getReference().child("host").child("email");

@@ -20,6 +20,7 @@ public class HostActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_host);
+        this.getSupportActionBar().setTitle("Current Host");
          database = FirebaseDatabase.getInstance();
          myRef = database.getReference();
 

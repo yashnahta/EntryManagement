@@ -40,6 +40,7 @@ public class Checkout extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkout);
         database = FirebaseDatabase.getInstance();
+        this.getSupportActionBar().setTitle("Check Out");
         myRef = database.getReference();
         EditText name = findViewById(R.id.nm);
         EditText email = findViewById(R.id.em);

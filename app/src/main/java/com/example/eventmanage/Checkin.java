@@ -35,6 +35,7 @@ public class Checkin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkin);
+        this.getSupportActionBar().setTitle("Check In");
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference();
         EditText name=findViewById(R.id.nm);
