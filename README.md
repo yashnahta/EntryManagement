@@ -48,7 +48,7 @@ Depending on the requirements we can use any of the above.
 
 
 # App ScreenShots-
-![Homescreen](s1.png)
+<img src="s1.png" width="32" />
 ![CheckIn](s2.png)
 ![CheckOut](s3.png)
 ![Current Host](s4.png)
