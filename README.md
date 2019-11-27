@@ -48,9 +48,9 @@ Depending on the requirements we can use any of the above.
 
 
 # App ScreenShots-
-<img src="s1.png" width="32" />
-![CheckIn](s2.png)
-![CheckOut](s3.png)
-![Current Host](s4.png)
-![Validate Host](s6.png)
-![Change Host](s5.png)
+<img src="s1.png" width="50" >
+<img src="s2.png" width="50" >
+<img src="s3.png" width="50" >
+<img src="s4.png" width="50" >
+<img src="s5.png" width="50" >
+<img src="s6.png" width="50" >
