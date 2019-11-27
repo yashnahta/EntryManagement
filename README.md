@@ -95,4 +95,5 @@ Depending on the requirements we can use any of the above.
 
 
 **Validate Host**
+
 <img src="s6.png" width="164" >
