@@ -10,6 +10,12 @@ Min Sdk version supported is 16. The app has been tested on Android Phone runnin
 
 To install the app either open source code in **Android Studio** and build to run the app or install it directly with the **[Apk File](https://drive.google.com/open?id=1PUNinAsr_B9krhzVt66ubLZn8Uf_tHN1)**
 
+Firebase Login credentials-
+
+Email-firebase2911@gmail.com
+
+Password-yashnahta291
+
 ## How It Works
 
 
