@@ -5,7 +5,8 @@ Entry Mnagement Software for Innovacer SDE Assignment
 Min Sdk version supported is 16. The app has been tested on Android Phone running Android Pie.
 
 # How It Works
-# Check In-
+The workflow is divided in 3 parts -
+# 1.Check In-
 When the user enters his details and checks in,the details are saved in Firebase Database-
 ![Database](firebase1.png)
 
@@ -19,7 +20,7 @@ Since our email sender is specialized for GMail, mailhost is hard coded. So, con
 
 ![Database](f2.png)
 
-# Check Out-
+# 2.Check Out-
 When the user enters his details and checks out,the details are saved in Firebase Database-
 
 ![Database](f4.png)
@@ -28,7 +29,7 @@ Also an E-mail is sent to Host after user Checks out of the meeting-
 
 ![Database](f3.png)
 
-# Host
+# 3.Host
 Host Details can be changed in 2 ways-
 
 1.Directly without any Validation.
