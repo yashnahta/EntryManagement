@@ -30,8 +30,11 @@ Also an E-mail is sent to Host after user Checks out of the meeting-
 
 # Host
 Host Details can be changed in 2 ways-
-*Directly without any Validation.
-*Check for the password of the previous Host.
+
+1.Directly without any Validation.
+
+2.Check for the password of the previous Host.
+
 Depending on the requirements we can use any of the above.
 
 # Tech Stack-
@@ -40,4 +43,5 @@ Depending on the requirements we can use any of the above.
 # Setup-
 To install the app either open source code in **Android Studio** and build to run the app or install it directly with the [Apk File](link)
 
+# App ScreenShots-
 
