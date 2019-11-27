@@ -4,6 +4,9 @@ Entry Mnagement Software for Innovacer SDE Assignment
 # Prerequisites
 Min Sdk version supported is 16. The app has been tested on Android Phone running Android Pie.
 
+# Setup-
+To install the app either open source code in **Android Studio** and build to run the app or install it directly with the [Apk File](https://drive.google.com/open?id=1PUNinAsr_B9krhzVt66ubLZn8Uf_tHN1)
+
 # How It Works
 The workflow is divided in 3 parts -
 # 1.Check In-
@@ -41,8 +44,6 @@ Depending on the requirements we can use any of the above.
 # Tech Stack-
 **Android using Java and Xml**
 
-# Setup-
-To install the app either open source code in **Android Studio** and build to run the app or install it directly with the [Apk File](https://drive.google.com/open?id=1PUNinAsr_B9krhzVt66ubLZn8Uf_tHN1)
 
 # App ScreenShots-
 ![Homescreen](s1.png)
