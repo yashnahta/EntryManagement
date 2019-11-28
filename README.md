@@ -4,7 +4,7 @@ Entry Mnagement Software for Innovaccer SDE Assignment
 
 ## Support Version
 
-Min Sdk version supported is 16. The app has been tested on Android Phone running Android Pie.
+Min Sdk version supported is 16. The app has been tested on Android Phone running Android Pie with aspect ratio - 18:9.
 
 ## Setup
 
